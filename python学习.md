@@ -21,3 +21,33 @@ print
 
 
 可以参考http://blog.csdn.net/liuxincumt/article/details/8183391
+
+
+
+
+#### python 数组合并
+
+python3.0 中数据合并只能是  a+b 
+extend 与append 合并后都是None
+
+
+E:\workspace\python\planApi\views\index.html
+E:\\workspace\\python\\planApi\\views
+
+
+#### PyCharm 不能识别和补全Tornado模板语言
+
+	每个项目下面会生成一个.idea/xxxx.iml的文件 其中有一段代码
+	
+	<component name="TemplatesService">
+	<option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="$MODULE_DIR$/views" />
+      </list>
+    </option>
+  </component>
+	
+	就因为 <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />这句话在开始的时候没有自动不全，不知道为什么
+
+
