@@ -48,6 +48,25 @@ E:\\workspace\\python\\planApi\\views
     </option>
   </component>
 	
-	就因为 <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />这句话在开始的时候没有自动不全，不知道为什么
+	就因为 <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />这句话在开始的时候没有自动不全，不知道为什么ide在开始的时候没有生成
+	
+	
+	
+	
+	
+#### python 处理中文
+在dict中包含中文时
+
+    s= {"name":"测试商品，请勿购买"}
+    print ujson.dumps(s).decode("unicode-escape")
+    print ujson.dumps(s).decode("utf-8")
+print
+显示
+
+	{"name":"测试商品，请勿购买"}
+	{"a":"\u6d4b\u8bd5\u5546\u54c1\uff0c\u8bf7\u52ff\u8d2d\u4e70"}
+
+
+可以参考http://blog.csdn.net/liuxincumt/article/details/8183391
 
 
