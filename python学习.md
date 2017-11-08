@@ -35,7 +35,7 @@ E:\workspace\python\planApi\views\index.html
 E:\\workspace\\python\\planApi\\views
 
 
-#### PyCharm 不能识别和补全Tornado模板语言
+#### PyCharm 不能识别和补全Tornado模板语言 
 
 	每个项目下面会生成一个.idea/xxxx.iml的文件 其中有一段代码
 	
@@ -48,10 +48,11 @@ E:\\workspace\\python\\planApi\\views
     </option>
   </component>
 	
-	就因为 <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />这句话在开始的时候没有自动不全，不知道为什么ide在开始的时候没有生成
+	就因为 <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />这句话在开始的时候没有自动不全，不知道为什么ide在开始的时候没有生成?
+	我搞明白了，因为Jinja2这个模板语言需要在项目开始前识别它
+	用pip install Jinja2 安装一下就可以解决问题	
 	
-	
-	
+	Jinja2 是一个现代的，设计者友好的，仿照 Django 模板的 Python 模板语言。
 	
 	
 #### python 处理中文
