@@ -58,7 +58,12 @@
 	}
 	```
 
+当输入完后，发现IDE提示 react和react-native都找不到。安装一下，我没有搜索命令，直接点击提示前面的"小灯泡"->**"install [name]"** 进行安装。
 
+至于为啥不识别，我判断是因为我跳过了上面的**2步**，没有安装Android Studio。
+
+	
+	
 
 
 参考资料: [React Native官网入门文档](http://reactnative.cn/docs/0.50/getting-started.html)
