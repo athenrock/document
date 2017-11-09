@@ -32,10 +32,18 @@
 	
 这是因为我在window下 ，而n模块是不支持的，绕不过去了，只能去[node官网](https://nodejs.org/en/) 下载exe文件进行安装，好在顺利安装成功了。
 
-2. 安装Android Studio
+2. 安装Android Studio  (顺便提一句，我一开始没有装这个)
+	
 	从 [官网](http://developer.android.com/sdk/index.html) 或 [平台](http://www.android-studio.org/)上下载安装包安装，没有啥说的
 	
+	一路next ，除了要选择Type的时候需要选择一下，两个选项“Standard”和“Custom”，即标准和自定义，如果你本机的Android SDK没有配置过，那么建议直接选择“Standard”, 点击“Finish”按钮
 
+因为我本地已经下载SDK并配置好了环境变量，所以我选择”Custom”，然后继续next。
+	
+	然后就是无休止的等待，各种下包，**而且需要翻墙**，这也是我一开始不愿意直接装Android Studio的原因，最后各种坑，再加上windos这方面先天不足，只能忍着下载安装
+	
+	
+	
 3. IDE选择
 
 我因为以前做.net，所以上手就先选型IDE，我装了Vs.code 和WebStorm，最后使用还是主要用webStorm。
@@ -144,6 +152,11 @@
 
 
 	npm install connect
+	
+升级成功了！！！！！！！！可惜安装react-native各种的缺包，然后各种的copy。。。别闹了，还是回去老老实实的安装Android Studio，因为创建React Native项目的时候需要找library（react-native-clr）包没有
+
+
+	
 
 	
 
