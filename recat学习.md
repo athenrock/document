@@ -32,7 +32,36 @@
 	
 这是因为我在window下 ，而n模块是不支持的，绕不过去了，只能去[node官网](https://nodejs.org/en/) 下载exe文件进行安装，好在顺利安装成功了。
 
-2. 安装Android Studio  (顺便提一句，我一开始没有装这个)
+2. 安装React Native
+
+	去Facebook的 [github](https://github.com/facebook/react-native.git) 上下载 ,下载完后进入react-native目录下的react-native-cli进行安装
+	
+		npm install -g
+		
+	结果出错了，在这块其实我想说，用git的cmd(Terminal) 比window自带的cmd好用，指哪打哪	
+	
+	npm WARN E:\workspace\react\react-native\react-native-cli\node_modules\ansi-regex is not a child of C:\Users\Administrator\AppData\Roaming\npm
+	npm ERR! path E:\workspace\react\react-native\react-native-cli\node_modules\ansi-regex
+	npm ERR! code ENOENT
+	npm ERR! errno -4058
+	npm ERR! syscall rename
+	npm ERR! enoent ENOENT: no such file or directory, rename 'E:\workspace\react\react-native\react-native-cli\node_modules\ansi-regex' -> 'E:\workspace\react\react-native\react-native-cli\node_modules\.ansi-regex.DELETE'npm ERR! enoent This is related to npm not being able to find a file.
+	npm ERR! enoent
+
+	这是神马情况，一脸懵逼网上搜了搜，有人说的rebuild一下，于是用命令：
+		
+		npm rebuild ansi-regex
+	
+	姑且试试.....一分钟后，不好使 这时候我才发现应该是我没有装ansi-regex，面壁三分钟
+	
+		npm install ansi-regex
+		
+	然后剩下的就简单了，少谁装谁
+		
+		
+	
+
+3. 安装Android Studio  (顺便提一句，我一开始没有装这个)
 	
 	从 [官网](http://developer.android.com/sdk/index.html) 或 [平台](http://www.android-studio.org/)上下载安装包安装，没有啥说的
 	
@@ -44,10 +73,23 @@
 	
 	
 	
-3. IDE选择
+4. IDE选择
 
 我因为以前做.net，所以上手就先选型IDE，我装了Vs.code 和WebStorm，最后使用还是主要用webStorm。
 
+
+5. 用Yarn、React Native的命令行工具（react-native-cli） 替代 npm
+	
+	作为一个window开发者最头痛的就是，这些工具，什么apt-get、yun、npm、pip，现在又出来了一个yarn，为啥就不能用一个
+	
+		npm install -g yarn react-native-cli
+		
+	安装完yarn后同理也要设置镜像源：
+		
+		yarn config set registry https://registry.npm.taobao.org --global
+		yarn config set disturl https://npm.taobao.org/dist --global
+		
+	
 
 ## 开始尝试
 
@@ -153,7 +195,12 @@
 
 	npm install connect
 	
-升级成功了！！！！！！！！可惜安装react-native各种的缺包，然后各种的copy。。。别闹了，还是回去老老实实的安装Android Studio，因为创建React Native项目的时候需要找library（react-native-clr）包没有
+升级成功了！！！！！！！！可惜安装react-native各种的缺包，然后各种的copy。。。别闹了。。
+
+老老实实的装react-native吧 
+
+	
+
 
 
 	
