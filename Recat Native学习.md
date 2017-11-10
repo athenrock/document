@@ -213,20 +213,80 @@
 
 
 
+### 尝试运行
 
-启动Genymotion，在Demo外面执行命令
+启动Genymotion，打开虚拟机。在Demo外面执行命令
 
 	react-native init demo  
 	
 	注: demo是我的项目名称
-
-
-
-
-
+	进demo目录，执行命令
+	
+		react-native run-android	
 	
 
+哦 NO！出错了，还是没有运行起来
 
+	FAILURE: Build failed with an exception.
+
+	* What went wrong:
+	Unable to start the daemon process.
+	This problem might be caused by incorrect configuration of the daemon.
+	For example, an unrecognized jvm option is used.
+	Please refer to the user guide chapter on the daemon at https://docs.gradle.org/2.14.1/userguide/gradle_daemon.html
+	Please read the following process output to find out more:
+	-----------------------
+	Error occurred during initialization of VM
+	Could not reserve enough space for object heap
+
+	* Try:
+	Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+	Could not install the app on the device, read the error above for details.
+	Make sure you have an Android emulator running or a device connected and have
+	set up your Android development environment:
+	https://facebook.github.io/react-native/docs/android-setup.html
+
+
+
+看样是gradle出问题了，可能是以为以前我机器上有个Gradle的东西，网上找了找也是建议干掉重新生成，找不到的同学用命令%USERPROFILE%，在这里面找一下
+找到后干掉(先别傻乎乎的干掉，重命名一下)，干掉后，运行下面的命令	
+	
+	(if not exist "%USERPROFILE%/.gradle" mkdir "%USERPROFILE%/.gradle") && (echo org.gradle.daemon=true >> "%USERPROFILE%/.gradle/gradle.properties")
+	
+看了一下，里面生成了一个文件gradle.properties，就一句话
+	
+	org.gradle.daemon=true 	
+	
+	
+继续刚才的尝试，在dome下运行 react-native run-android ,好了恼人的下载又开始了。
+三十分钟后，尝试，再次失败，囧！！！
+
+	FAILURE: Build failed with an exception.
+
+	* Where:
+	Build file 'E:\workspace\react\demo\android\app\build.gradle' line: 1
+
+	* What went wrong:
+	A problem occurred evaluating project ':app'.
+	> java.lang.UnsupportedClassVersionError: com/android/build/gradle/AppPlugin : Unsupported major.minor version 52.0
+
+	* Try:
+	Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+	BUILD FAILED
+
+	Total time: 6.951 secs
+	Could not install the app on the device, read the error above for details.
+	Make sure you have an Android emulator running or a device connected and have
+	set up your Android development environment:
+	https://facebook.github.io/react-native/docs/android-setup.html
+
+
+
+一般出现**Unsupported major.minor version 52.0**这个问题的，都是因为JDK包版本的问题，查了一下环境变量，果然指的是JDK7，换成JDK8，在尝试
+
+
+HOHO！！！成功了
 
 	
 
