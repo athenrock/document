@@ -2,9 +2,12 @@
 公司要做新项目，选型用React Native，所以学习一下
 
 
-
 首先，我是window系统，这就导致我很多地方有先天不足，好在网上已经有很多趟过坑的大牛们分享的经验。再次表示万分感谢。
+再次我开始学习的时候，这个文件命名是recat学习，在我的臆断里，recat和recat-native一个是一个的继承，其实错了，两个是不同概念
 
+	React是一种思想，Facebook对于Web Components的理解与实现。其理念是“Learn once, write anywhere”。
+	而React native 是用React的方式开发mobileApp。开始主要是为了IOS端，还有英ReactJS是web端的
+	
 
 
 
@@ -91,8 +94,19 @@
 		
 	
 
+6. 安装模拟器，官网推荐 Genymotion，以下是官方文档的描述
+	
+	>1.下载和安装Genymotion（genymotion需要依赖VirtualBox虚拟机，下载选项中提供了包含VirtualBox和不包含的选项，请按需选择）。
+	>2. 打开Genymotion。如果你还没有安装VirtualBox，则此时会提示你安装。
+	>3. 创建一个新模拟器并启动。
+	>4. 启动React Native应用后，可以按下F1来打开开发者菜单
+	
+	值得一提的是，Genymotion现在使用必须注册，所以不要花时间想着怎么绕过去了。同理，安装很费时间，需要翻墙，需要网速。。。。（怀念window程序下载安装包，无脑next）
+	
+	
 ## 开始尝试
 
+#### 代码编写，及环境
 创建一个目录，创建一个app.js,写下面一段话（当然这是我copy别人的）
 
 	```
@@ -174,30 +188,41 @@
 	```
 
 这个时候我判断不了react是否已经安装成功了，反正package里面有了，姑且算成了吧，继续安装react-native，方法类似
+	安装的时候第一个错误
 
-安装的时候第一个错误
-
-	npm WARN deprecated connect@2.30.2: connect 2.x series is deprecated
+		npm WARN deprecated connect@2.30.2: connect 2.x series is deprecated
 	
-更新 connect 
+	更新 connect 
 
-	npm update connect
+		npm update connect
+		
+	查看版本
+		
+		npm -v connect
+		
+	执行升级 @5 应该标示自己的npm版本，我的是5.5.1所以我用@5	
+		npm install -g npm@5
+
+	上面的方式不行。。。。。还是老老实实的用install吧
+
+		npm install connect
 	
-查看版本
+升级成功了！！！！！！！！可惜安装react-native各种的缺包，然后各种的copy。。。别闹了,老老实实的装react-native吧。
+
+回过头把东西都装的差不多了继续咱们的尝试，把以前无脑建的项目干掉，用WebStrom重新创建一个demo，这时候的再创建的时候react-native-cli自动被选中了，开始愉快的编程了。
+
+
+
+
+启动Genymotion，在Demo外面执行命令
+
+	react-native init demo  
 	
-	npm -v connect
-	
-执行升级 @5 应该标示自己的npm版本，我的是5.5.1所以我用@5	
-	npm install -g npm@5
-
-上面的方式不行。。。。。还是老老实实的用install吧
+	注: demo是我的项目名称
 
 
-	npm install connect
-	
-升级成功了！！！！！！！！可惜安装react-native各种的缺包，然后各种的copy。。。别闹了。。
 
-老老实实的装react-native吧 
+
 
 	
 
