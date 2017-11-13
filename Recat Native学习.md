@@ -283,10 +283,23 @@
 
 
 
-一般出现**Unsupported major.minor version 52.0**这个问题的，都是因为JDK包版本的问题，查了一下环境变量，果然指的是JDK7，换成JDK8，在尝试
+一般出现**Unsupported major.minor version 52.0**这个问题的，都是因为JDK包版本的问题，查了一下环境变量，果然指的是JDK7，换成JDK8，再尝试
 
 
 HOHO！！！成功了
+
+囧，我新建的项目又不好使了，还是报**Unsupported major.minor version 52.0**的错误，我是各种修改各种查询，最后把环境变量里面的gradle干掉了，大兄弟终于报别的错误了
+	
+		
+	* What went wrong:
+	Execution failed for task ':app:mergeDebugResources'.
+	> Error: java.util.concurrent.ExecutionException: java.io.IOException: 管道正在被关闭。
+
+	* Try:
+	Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+无语问苍天，我重启了机器，歪打正着，好了
+
 
 	
 
