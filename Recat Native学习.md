@@ -304,7 +304,7 @@ HOHO！！！成功了
 
 运行起来后，出现错误
 
-![img](https://github.com/athenrock/document/blob/master/images/react/err1.png)
+![img](https://github.com/athenrock/document/blob/master/images/react/err1.png){:height="50%" width="50%"}
 	
 	
 
