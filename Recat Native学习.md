@@ -306,8 +306,23 @@ HOHO！！！成功了
 
 <img src="https://github.com/athenrock/document/blob/master/images/react/err1.png" height="50%" width="50%" />
 	
+	React Native unable to load script from assets 'index.android.bundle'.Make sure your bundle is packaged correctly or you're running a package server
 	
+网上搜了一下，如下解决
+1. 在工程目录冲创建assets文件 mkdir
+	
+	android/app/src/main/assets
 
+2. 运行命令	
+
+	react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+
+3. 继续启动
+
+	react-native run-android
+	
+	
+OK! 启动成功
 	
 
 
