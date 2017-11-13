@@ -300,7 +300,12 @@ HOHO！！！成功了
 
 无语问苍天，我重启了机器，歪打正着，好了
 
+### 模拟器运行问题
 
+运行起来后，出现错误
+
+![img](https://github.com/athenrock/document/blob/master/images/react/err1.png)
+	
 	
 
 	
