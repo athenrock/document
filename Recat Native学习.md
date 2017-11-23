@@ -324,6 +324,35 @@ HOHO！！！成功了
 	
 OK! 启动成功
 	
+### react-native 的web尝试
+
+[React Native 项目运行在 Web 浏览器上面 ](https://www.cnblogs.com/On1Key/p/5780577.html)
+[react-web](https://github.com/taobaofed/react-web)
+
+[react-native-web](https://www.npmjs.com/package/react-native-web)
+[react-native-web](https://github.com/necolas/react-native-web)
+
+
+1. 首先试用 react-web ,按照One1Key的blog配置，然后运行后出错
+
+
+
+	ERROR in ./index.web.js
+	Module not found: Error: Cannot resolve module 'react/lib/ReactMount' in E:\workspace\react\webdemo
+	@ ./index.web.js 1:299-330
+	
+网上找的是因为“react/lib/ReactMount”在react@15.4.0版本移除。如果你还需要继续使用react高版本，可以在webpack配置alias解决这个问题
+
+	alias: {
+		'react/lib/ReactMount': 'react-dom/lib/ReactMount'
+	}
+	
+各种出错。遂放弃。。。
+
+2. 用react-native-web ,按照说明文档，进行配置，运行，ok没问题！！	
+	
+
+
 
 
 参考资料: [React Native官网入门文档](http://reactnative.cn/docs/0.50/getting-started.html)
