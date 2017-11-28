@@ -29,12 +29,6 @@ LoopBack比较大也比较重，而且对我们项目只是做接口整合，没
 
 
 
-
-
-
-
-
-
 参考资料：
 
 1. [2017 Node.js 开发框架比较 ](http://cnodejs.org/topic/58caaec27dee71e5193a53ce)	
