@@ -36,10 +36,7 @@ LoopBack比较大也比较重，而且对我们项目只是做接口整合，没
 
 
 参考资料：
-	[2017 Node.js 开发框架比较 ](http://cnodejs.org/topic/58caaec27dee71e5193a53ce)
-	
-	[hapi.js在国内用的不多,我来稍微安利一下](http://cnodejs.org/topic/56ed0cdf515e7305367f0df7)
-	
-	[构建通用的 React 和 Node 应用](https://www.cnblogs.com/nzbin/p/5860219.html)
-	
-	[你们是不是想看框架大战？](https://cnodejs.org/topic/587f20445d4612c33919e7eb)
+	1.[2017 Node.js 开发框架比较 ](http://cnodejs.org/topic/58caaec27dee71e5193a53ce)	
+	2.[hapi.js在国内用的不多,我来稍微安利一下](http://cnodejs.org/topic/56ed0cdf515e7305367f0df7)	
+	3.[构建通用的 React 和 Node 应用](https://www.cnblogs.com/nzbin/p/5860219.html)	
+	4.[你们是不是想看框架大战？](https://cnodejs.org/topic/587f20445d4612c33919e7eb)
