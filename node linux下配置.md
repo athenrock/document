@@ -9,7 +9,7 @@
 
 2. 连上网后，开始安装第一个碰到的错误：
 	
-	> electron@1.7.9 postinstall /data/www/topshopcnapi/node_modules/electron
+	> electron@1.7.9 postinstall /data/www/proapi/node_modules/electron
 	> node install.js
 	
 	/data/www/topshopcnapi/node_modules/electron/install.js:48
@@ -43,13 +43,15 @@
 
 2. 这个错误
 
-	npm ERR! path /data/www/topshopcnapi/node_modules/home-path
+	npm ERR! path /data/www/proapi/node_modules/home-path
 	npm ERR! code ENOENT
 	npm ERR! errno -2
 	npm ERR! syscall access
-	npm ERR! enoent ENOENT: no such file or directory, access '/data/www/topshopcnapi/node_modules/home-path'
+	npm ERR! enoent ENOENT: no such file or directory, access '/data/www/proapi/node_modules/home-path'
 	npm ERR! enoent This is related to npm not being able to find a file.
 	npm ERR! enoent 
 	
 	npm ERR! A complete log of this run can be found in:
 	npm ERR!     /root/.npm/_logs/2017-12-08T02_30_20_082Z-debug.log
+
+没有权限 yong chomd 777 * 解决了
