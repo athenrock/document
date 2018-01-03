@@ -33,7 +33,7 @@ render(){
 <ul><li onClick={this.selected}><span>abcde</span><a>delete</></li></ul>
 ```
 
-selected方式实现
+selected方式实现:一
 
 ```javascript 
 selected=(e)=>{
@@ -43,9 +43,17 @@ selected=(e)=>{
       }
 }
 ```
+selected方式实现:二
+```javascript 
+selected=(e)=>{
+	 e.preventDefault();
+        //TODO:继续逻辑
+}
+```
 
-###3. 路由  & 子路由
+###3. 路由  
 	
+>1.子路由  这个没有研究完，只是记录一下
 
 ```javascript 
 const routes = {
@@ -81,7 +89,7 @@ const routes = {
 ```
 
 
-###4. 页面跳转及传值 
+###4. 页面跳转时传值 
 使用react-router 中的Link传值
 >1. props.params
 
@@ -131,4 +139,87 @@ var {id,name,age} = data;
 觉得不暴露参数前提下的只能放在state中
 
 
+###5.页面中的控件问题
+1. 生成的input控件无法输入
 
+调查了半天，发现是因为初始化的时候，我给input控件的value进行的赋值，所以导致，input控件无法输入或进行修改
+
+
+
+
+
+### 6. react 中inject 是什么意思
+代码实例
+
+```javascript
+	<a className={inject(styles.closeButton)} onClick={onClose}>
+              <CloseCircle diameter={40}/>
+            </a>
+```
+
+
+### 7.react 判断进入不同子组件
+
+
+
+### 8.三级联动
+
+https://github.com/nickeljew/react-picker
+https://github.com/petitspois/react-picker.git
+
+https://ant.design/components/cascader-cn/
+
+
+
+### 9.proptypes 
+	
+具体就是组件传值时，参数类型校验，参见React proptypes
+
+
+### 10. 滚动条（scrollbar） 定位问题
+具体场景，省市区三级联动时，选择靠下的选项时，组件再次打开，需要定位到选项那个位置	
+
+具体参照下面代码：
+
+
+```javascript
+ componentDidUpdate(){
+	let pickerMenu = document.querySelectorAll('.picker-menu');
+	pickerMenu.forEach(function (item,k) {
+		let scrollTop = item.querySelector(".selected").offsetTop || 0;
+		if(item.scrollTop === 0){  //防止实时跳动
+			item.scrollTop = scrollTop< 160 ? 0 : scrollTop - 40 ;
+		}
+	})
+};
+
+```
+
+注意，是在*componentDidUpdate*接口里面写的
+
+
+### 11.react操作元素
+
+方法一: 使用ref，
+
+```javascript
+	selected=()=>{
+	
+		this.refs.divBox.innHtml="换一句话"+'<a onClick={this.selected}>换一下</a>'
+	}
+
+	create=()=>{
+		return <div ref="divBox">这是一个div。<a onClick={this.selected}>换一下</a></div>
+	}
+
+```
+方法二: 使用 querySelector、querySelectorAll 具体参考第10 
+
+
+
+ 
+
+
+
+
+ 
