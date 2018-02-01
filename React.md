@@ -228,12 +228,28 @@ https://ant.design/components/cascader-cn/
 
 [教你如何搭建一个超完美的服务端渲染开发环境](https://www.jianshu.com/p/0ecd727107bb)
 
-[基于 React 的通用框架 Next.js：服务端 React]
-	[原文:](https://scotch.io/tutorials/react-universal-with-next-js-server-side-react)
-	[翻译:](http://www.zcfy.cc/article/react-universal-with-next-js-server-side-react-2158.html)
+基于 React 的通用框架 Next.js：服务端 React
+	[原文](https://scotch.io/tutorials/react-universal-with-next-js-server-side-react)
+	[翻译](http://www.zcfy.cc/article/react-universal-with-next-js-server-side-react-2158.html)
+	
+	
+	
+### 重构项目
+
+参考：[react大前端开发之超简说明（站在巨人的肩上）](https://www.cnblogs.com/lihan829/p/5947512.html)
+想在项目是一个标准的前端react项目，需要扩展成服务器渲染，服务器用node框架Hapi
+如何着手：？？？？
+
+先执行了个npm install hapi， 安装node.js的web服务器	
+npm install inert，让上一部安装的hapi服务器可以返回静态文件，比如JS啊，静态html啊，图片啊，css啊之类的东西（bullshit)，还要在等下的server.js里添加上注册代码。
  
 
+将react react-dom react-router 都升级了
 
+升级的方式 卸了重装 npm remove react react-dom react-router
+
+
+### redux
 
 
  

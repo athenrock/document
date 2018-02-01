@@ -84,6 +84,9 @@ npm ERR!     C:\Users\Administrator\AppData\Roaming\npm-cache\_logs\2017-11-29T0
 	    }
 	});	
 
+> 5.开源的架构老是更新，hapi 17.0的修改变动太大了，参考下面的进行配置
+
+	https://github.com/zeit/next.js/blob/b8e376a13f8bb03df4bad209d0db705ec3d2f3bf/examples/custom-server-hapi/server.js	
 
 	
 	
