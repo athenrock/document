@@ -141,4 +141,44 @@ use: {
 ```
 
 	
+	
+###React 克隆组件：React.cloneElement() 
+需要注意，在父组件的构造器中，需要动态制定函数的 this 指向，否则该函数通过事件触发时，this指向子组件。通过下面语句：
+```
+this.handleClick = this.handleClick.bind(this);
+```
 
+
+####服务器渲染数据，关注一下koa-cola
+
+
+
+####ERROR in Entry module not found: Error: Can't resolve 'xxxxx' in 'XXXXXXXXX'
+这个绝对是地址写错了，仔细找	
+
+
+#### css-loader出的问题
+Module build failed:
+    @white:#fff;
+         ^
+          Invalid CSS after "@white:": expected 1 selector or at-rule, was "#fff;"
+
+	
+同样衍生出下面的问题
+	
+(5:1) Unknown word
+
+      3 | // load the styles
+      4 | var content = require("!!./style.less");
+    > 5 | if(typeof content === 'string') content = [[module.id, content, '']];
+        | ^
+      6 | // Prepare cssTransformation
+      7 | var transform;
+	  
+	  
+	  
+在webpack.config.js文件里面，loader的解析是逆序的，因此要把style-loader写在css-loader的前面； 
+
+
+
+	  

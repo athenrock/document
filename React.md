@@ -234,7 +234,7 @@ https://ant.design/components/cascader-cn/
 	
 	
 	
-### 重构项目
+### 14 重构项目
 
 参考：[react大前端开发之超简说明（站在巨人的肩上）](https://www.cnblogs.com/lihan829/p/5947512.html)
 想在项目是一个标准的前端react项目，需要扩展成服务器渲染，服务器用node框架Hapi
@@ -249,7 +249,23 @@ npm install inert，让上一部安装的hapi服务器可以返回静态文件�
 升级的方式 卸了重装 npm remove react react-dom react-router
 
 
-### redux
+### 15 redux
 
 
+
+### 16 webpack.DefinePlugin 中设置全局变量，为什么是 undefined
+
+```
+new webpack.DefinePlugin({
+		'process.env.__CLIENT__': true,
+		'process.env.NODE_ENV': JSON.stringify('development'),
+		'__SERVER__': false}),  
+
+//最后输出
+process.env.__CLIENT__:undefined
+process.env.NODE_ENV:development
+process.env.__SERVER__:undefined
+
+```
+<code>NODE_ENV</code> 有值，是因为我在启动项里面设置了<code>NODE_ENV=development</code> 
  
