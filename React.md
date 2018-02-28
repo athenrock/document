@@ -269,3 +269,12 @@ process.env.__SERVER__:undefined
 ```
 <code>NODE_ENV</code> 有值，是因为我在启动项里面设置了<code>NODE_ENV=development</code> 
  
+ 
+ 
+### 17 ejs 在javascript中报错 
+一般来说，都是静态页加载有问题,我用的是koa，所以代码如下
+```
+import views from 'koa-views'
+app.use(views(path.resolve(__dirname, '../views/prod'), {map: {html: 'ejs'}}))
+```
+
