@@ -79,6 +79,89 @@ var Home = function Home(nextState, callback) {
     }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 ```
-所以怎么都是*Not Found* ，我把按需加载先取掉，解决了
+所以怎么都是*Not Found* ，我把按需加载先取掉
+  之前的router/index.js是这么写的
+  ```
+ 
+// Hook for server
+if (typeof require.ensure !== 'function') {
+    require.ensure = function(dependencies, callback) {
+        callback(require)
+    }
+}
+
+
+
+const Hello =(nextState,callback)=>{
+    require.ensure([], require => {
+        callback(null, require('../page/hello'))
+    }, 'hello')
+}
+const Home = (nextState, callback) => {
+    require.ensure([], require => {
+        callback(null, require('../page/home'));
+    }, 'home');
+};
+
+
+const routes = {
+    childRoutes: [{
+        path: '/',
+        component: require('../page'),
+        indexRoute: {
+            component:require('../page/home')
+        },
+        childRoutes:[
+            {
+                path:'hello',
+                getComponent:Hello
+            }
+        ]
+    }]
+}
+
+export default routes;
+
+  ```
+
+修改后这么写
+
+```
+
+import page from '../page'
+import home from '../page/home'
+import hello from '../page/hello'
+
+const routes = {
+    childRoutes: [{
+        path: '/',
+        component: page,
+        indexRoute: {
+            component:home
+        },
+        childRoutes:[
+            {
+                path:'hello',
+                component:hello
+            }
+        ]
+    }]
+}
+
+export default routes;
+```
+现在编译没有问题，那么有引出一个问题,编译完以后，代码没有在分割了，所有的业务代码都打包到bundle.js文件了。
+
+
+带着这个问题，在网上搜了一大圈，竟然没有发现react-router3关于代码分割的文章，只是提到 
+
+    在react-router 3中，可以使用Route组件中getComponent这个API来进行代码拆分。
+
+     
+后续在网上看了一下，Facebook官方要求禁止使用`require.ensure`.[#2177](https://github.com/facebook/create-react-app/pull/2177),推荐使用`import`,而且 在webpack 2的官网上写了这么一句话：
+  
+    require.ensure() is specific to webpack and superseded by import().
+
+
 
 
